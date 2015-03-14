@@ -30,5 +30,5 @@ Commands supported include:
     DESCRIBE [<bucketname>]
 more to follow..
 
-![couchbase-sql-shell screenshot](http://avensolutions.com/images/couchbase-sql-shell.png)
+![couchbase-sql-shell screenshot](http://avensolutions-images.s3-website-us-east-1.amazonaws.com/couchbase-sql-shell.png)
 

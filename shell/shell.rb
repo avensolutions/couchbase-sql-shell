@@ -145,6 +145,14 @@ class ShellUI
 		end
 	end
 
+	def cls(params)
+		system('cls')
+	end
+	
+	def clear(params)
+		system('clear')
+	end
+	
 end
 
 io = HighLine.new
@@ -155,16 +163,16 @@ shell = ShellUI.new
 @@console.addCommand('connect', shell.method(:connect), 'CONNECT <ipaddress>, <username>, <password>, [<bucket_name>]')
 @@console.addCommand('show', shell.method(:show), 'SHOW BUCKETS|VERSION|VIEWS')
 @@console.addCommand('describe', shell.method(:describe), 'DESCRIBE <bucketname>|<viewname>')
+@@console.addCommand('cls', shell.method(:cls), 'cls')
+@@console.addCommand('clear', shell.method(:clear), 'clear')
 #use
-#cls
-#clear
-#bye
 #ping
-#disconnect
 
 @@console.addHelpCommand('help', 'Help')
 @@console.addExitCommand('exit', 'Exit from program')
 @@console.addAlias('quit', 'exit')
+@@console.addAlias('bye', 'exit')
+@@console.addAlias('disconnect', 'exit')
 
 #console.start("%s> ",[Dir.method(:pwd)])
 @@console.start("%s> ",[@@prompt])
